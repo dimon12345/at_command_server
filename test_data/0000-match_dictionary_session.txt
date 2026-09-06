@@ -1,0 +1,18 @@
+# Словарь ожиданий с шаблонами
+
+ATI
+TTY device emulator with AT command server. v1.0.0
+
+OK
+ATD5551234
+Dial is not supported
+
+OK
+ATL0
+Speaker is not supported
+
+OK
+ATL5
+Speaker is not supported
+
+OK

@@ -1,0 +1,22 @@
+# Работа с SIM пин кодом
+
+AT+COPS?
++CME ERROR: SIM PIN required
+AT+COPS=1,2,"25001"
++CME ERROR: SIM PIN required
+AT+CPIN?
++CPIN: SIM PIN
+
+OK
+AT+CPIN="1234"
++CME ERROR: incorrect password
+AT+CPIN="4321"
+OK
+AT+CPIN?
++CPIN: READY
+
+OK
+AT+COPS?
++COPS: 0,0,"MTS RUS"
+
+OK

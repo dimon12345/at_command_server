@@ -1,0 +1,11 @@
+# Ручной выбор оператора в режиме 1
+
+AT+CPIN="4321"
+AT+COPS=1,0,"MTS RUS"
+AT+COPS?
+AT+COPS=1,1,"Beeline"
+AT+COPS?
+AT+COPS=1,2,"25002"
+AT+COPS?
+AT+COPS=1,0,"MTS RUS"
+AT+COPS?

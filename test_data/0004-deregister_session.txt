@@ -1,0 +1,34 @@
+# Дерегистрация. Режим 1
+
+AT+CPIN="4321"
+OK
+AT+COPS=2
+OK
+AT+COPS?
++COPS: 2
+
+OK
+AT+COPS=0
+OK
+AT+COPS?
++COPS: 0,0,"MTS RUS"
+
+OK
+AT+COPS=2
+OK
+AT+COPS?
++COPS: 2
+
+OK
+AT+COPS=1,2,"25002"
++CME ERROR: no network service
+AT+COPS?
++COPS: 1
+
+OK
+AT+COPS=1,2,"25001"
+OK
+AT+COPS?
++COPS: 1,2,"25001"
+
+OK

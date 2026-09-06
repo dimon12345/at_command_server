@@ -1,0 +1,10 @@
+# Ошибки в команде AT+COPS
+
+AT+CPIN="4321"
+OK
+AT+COPS=
+ERROR
+AT+COPS=5
+ERROR
+AT+COPS=01
+ERROR

@@ -1,0 +1,6 @@
+# Ошибки в команде AT+COPS
+
+AT+CPIN="4321"
+AT+COPS=
+AT+COPS=5
+AT+COPS=01

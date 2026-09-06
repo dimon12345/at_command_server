@@ -1,0 +1,8 @@
+# простая команда
+ATI=TTY device emulator with AT command server. v1.0.0
+
+# шаблон c символом '*'
+ATD*=Dial is not supported
+
+# шаблон с символом '.'
+ATL.=Speaker is not supported

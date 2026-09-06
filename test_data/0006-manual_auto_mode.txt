@@ -1,0 +1,9 @@
+# Ручной/автоматический выбор оператора. Режим 4
+
+AT+CPIN="4321"
+AT+COPS=4,1,"Beeline"
+AT+COPS?
+AT+COPS=4,2,"25077"
+AT+COPS?
+AT+COPS=4,2,"25001"
+AT+COPS?

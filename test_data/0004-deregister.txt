@@ -1,0 +1,13 @@
+# Дерегистрация. Режим 1
+
+AT+CPIN="4321"
+AT+COPS=2
+AT+COPS?
+AT+COPS=0
+AT+COPS?
+AT+COPS=2
+AT+COPS?
+AT+COPS=1,2,"25002"
+AT+COPS?
+AT+COPS=1,2,"25001"
+AT+COPS?

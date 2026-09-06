@@ -1,0 +1,9 @@
+# Работа с SIM пин кодом
+
+AT+COPS?
+AT+COPS=1,2,"25001"
+AT+CPIN?
+AT+CPIN="1234"
+AT+CPIN="4321"
+AT+CPIN?
+AT+COPS?
