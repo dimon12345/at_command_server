@@ -6,7 +6,6 @@
 #include "AtCommandExecutor.h"
 
 namespace {
-    constexpr std::string_view TTY_OPEN_ERROR_MESSAGE = "Can't open tty: ";
     const size_t AT_COMMAND_BUFFER_SIZE = 1024;
 }
 
