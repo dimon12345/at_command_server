@@ -23,5 +23,5 @@ private:
     AtCommandExecutor executor_;
 
     void processRawData(std::string_view raw_data);
-    void executeCommand(const std::string_view command);
+    void executeCommand(std::string_view command);
 };
