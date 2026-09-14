@@ -4,7 +4,7 @@ AT+CPIN="4321"
 OK
 
 AT+COPS=?
-+COPS: (2,"MTS RUS","MTS RUS","25001"),(3,"Megafon RUS","Megafon","25002"),(3,"Beeline","Beeline","25099"),,(0,1,2,3,4),(0,1,2)
++COPS: (2,"MTS RUS","MTS","25001"),(3,"Megafon RUS","Megafon","25002"),(3,"Beeline","Beeline","25099"),,(0,1,2,3,4),(0,1,2)
 
 OK
 

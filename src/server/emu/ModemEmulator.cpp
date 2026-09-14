@@ -12,7 +12,7 @@ namespace {
 }
 
 ModemEmulator::ModemEmulator() {
-    operators_.push_back({AVAILABLE_NETWORK, "MTS RUS", "MTS RUS", "25001"});
+    operators_.push_back({AVAILABLE_NETWORK, "MTS RUS", "MTS", "25001"});
     operators_.push_back({FORBIDDEN_NETWORK, "Megafon RUS", "Megafon", "25002"});
     operators_.push_back({FORBIDDEN_NETWORK, "Beeline", "Beeline", "25099"});
 

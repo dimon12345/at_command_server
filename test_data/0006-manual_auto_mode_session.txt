@@ -5,7 +5,7 @@ OK
 AT+COPS=4,1,"Beeline"
 OK
 AT+COPS?
-+COPS: 0,1,"MTS RUS"
++COPS: 0,1,"MTS"
 
 OK
 AT+COPS=4,2,"25077"
