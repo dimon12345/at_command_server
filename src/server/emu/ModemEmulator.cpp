@@ -102,6 +102,7 @@ std::string ModemEmulator::getSelectionOfCommonOperator() {
     switch(format_) {
         case 0:
             oper = op.long_name;
+            break;
         case 1:
             oper = op.short_name;
             break;
