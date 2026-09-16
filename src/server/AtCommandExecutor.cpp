@@ -13,7 +13,7 @@ namespace {
 }
 
 AtCommandExecutor::AtCommandExecutor(const Config &config, AtCommandServerState &state, AtCommandResponseSender &sender)
-        : config_(config), state_(state), sender_(sender),
+        : state_(state), sender_(sender),
           dictionary_(config), cops_command_handler_(sender, modem_),
           cpin_command_handler_(sender, modem_) {
 

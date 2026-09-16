@@ -15,7 +15,6 @@ public:
     void sendResponse(std::string_view response) override;
     void sendCmeErrorResponse(const CmeError &error) override;
 private:
-    const class Config &config_;
     AtCommandServerState state_;
     std::string rx_buffer_;
 

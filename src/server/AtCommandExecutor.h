@@ -19,7 +19,6 @@ public:
     bool execute(std::string_view command);
 
 private:
-    const class Config &config_;
     class AtCommandServerState &state_;
     class AtCommandResponseSender &sender_;
 

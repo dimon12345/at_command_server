@@ -10,7 +10,7 @@ namespace {
 }
 
 AtCommandServer::AtCommandServer(const class Config &config)
-        : config_(config), executor_(config, state_, *this) {
+        : executor_(config, state_, *this) {
 }
 
 int AtCommandServer::run() {
