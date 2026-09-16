@@ -6,7 +6,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "dictionary/AtCommandDictionary.h"
+#include "AtCommandDictionary.h"
 #include "command_handlers/CopsCommandHandler.h"
 #include "command_handlers/CpinCommandHandler.h"
 #include "emu/ModemEmulator.h"

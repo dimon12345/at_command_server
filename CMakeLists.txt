@@ -18,11 +18,11 @@ FetchContent_MakeAvailable(googletest)
 
 set(COMMON_SOURCES
     src/Config.cpp
+    src/server/AtCommandDictionary.cpp
     src/server/AtCommandExecutor.cpp
     src/server/AtCommandResponseSender.cpp
     src/server/command_handlers/CopsCommandHandler.cpp
     src/server/command_handlers/CpinCommandHandler.cpp
-    src/server/dictionary/AtCommandDictionary.cpp
     src/server/emu/ModemEmulator.cpp
 )
 
