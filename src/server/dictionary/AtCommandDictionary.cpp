@@ -18,9 +18,7 @@ namespace {
 }
 
 
-AtCommandDictionary::AtCommandDictionary(const Config &config)
-        : config_(config) {
-
+AtCommandDictionary::AtCommandDictionary(const Config &config) {
     std::ifstream file(config.dictionary_filename);
     if (!file.is_open()) {
         std::string message = "Can't open dictionary file: " + config.dictionary_filename;
