@@ -39,7 +39,7 @@ void CopsCommandHandler::handle(std::string_view command) {
     }
 
     if (command.size() == 1 && command[0] == '?') {
-        std::string response = "+COPS: " + modem_.getAvailableOperators();
+        std::string response = COPS_RESPONSE_PREFIX + modem_.getAvailableOperators();
         sender_.sendResponse(response);
         sender_.sendOkResponse();
         return;
