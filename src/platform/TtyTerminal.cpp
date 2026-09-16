@@ -30,8 +30,6 @@ TtyTerminal::TtyTerminal() {
 
     std::cout << "TTY device ready: " << name_ptr << std::endl;
     std::cout << "please use 'screen " << name_ptr << "'" << std::endl;
-
-    tty_slave_name_ = name_ptr;
 }
 
 size_t TtyTerminal::readData(std::span<char> buffer) const {

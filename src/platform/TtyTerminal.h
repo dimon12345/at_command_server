@@ -14,5 +14,4 @@ public:
     int bytesAvailable() const;
 private:
     UniqueFileDescriptor tty_master_fd_;
-    std::string tty_slave_name_;
 };
