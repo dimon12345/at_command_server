@@ -23,6 +23,9 @@ namespace {
     }
 }
 
+Config::Config() : dictionary_filename(DefaultDictionaryFilename), verbose(false) {
+}
+
 Config::Config(int argc, char **argv) {
     argparse::ArgumentParser program(AppName);
     ::parse_arguments(program, argc, argv);

@@ -79,9 +79,7 @@ namespace {
 
 
 TEST(AtCommandExecutorTest, TestDataTest) {
-    int argc = 1;
-    char *argv[] = {const_cast<char *>("test"), nullptr};
-    Config config(argc, argv);
+    Config config;
     config.verbose = true;
 
     auto all_test_data = getAllTestData();
