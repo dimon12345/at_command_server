@@ -15,6 +15,41 @@ namespace {
                     "]: '" + line + "'") {
         }
     };
+
+    // Bottom-Up Dynamic Programming с оптимизацией памяти.
+    bool isPatternMatch(std::string_view command, std::string_view pattern) {
+        size_t n = command.length();
+        size_t m = pattern.length();
+
+        std::vector<bool> dp(m + 1, false);
+        std::vector<bool> prev_dp(m + 1, false);
+
+        prev_dp[0] = true;
+
+        for (size_t j = 0 ; j < m; ++j) {
+            if (pattern[j] == '*') {
+                prev_dp[j] = prev_dp[j];
+            }
+        }
+
+        for (size_t i = 0; i < n; ++i) {
+            std::fill(dp.begin(), dp.end(), false);
+
+            for (int j = 0; j < m; ++j) {
+                if (pattern[j] == '*') {
+                    dp[j + 1] = dp[j] || prev_dp[j + 1];
+                } else if (pattern[j] == '.' || pattern[j] == command[i]) {
+                    dp[j + 1] = prev_dp[j];
+                } else {
+                    dp[j + 1] = false;
+                }
+            }
+
+            prev_dp = dp;
+        }
+
+        return prev_dp[m];
+    }
 }
 
 
@@ -60,45 +95,10 @@ const std::vector<AtCommandDictionary::command_response_pair_t> &AtCommandDictio
 std::string_view AtCommandDictionary::parseCommand(std::string_view command) const
 {
     for (const auto &pattern: pattern_commands_) {
-        if (isMatch(command, pattern.first)) {
+        if (::isPatternMatch(command, pattern.first)) {
             return pattern.second;
         }
     }
 
     return EMPTY_STRING_VEW;
-}
-
-// Bottom-Up Dynamic Programming с оптимизацией памяти.
-bool AtCommandDictionary::isMatch(std::string_view command, std::string_view pattern) const {
-    size_t n = command.length();
-    size_t m = pattern.length();
-
-    std::vector<bool> dp(m + 1, false);
-    std::vector<bool> prev_dp(m + 1, false);
-
-    prev_dp[0] = true;
-
-    for (size_t j = 0 ; j < m; ++j) {
-        if (pattern[j] == '*') {
-            prev_dp[j] = prev_dp[j];
-        }
-    }
-
-    for (size_t i = 0; i < n; ++i) {
-        std::fill(dp.begin(), dp.end(), false);
-
-        for (int j = 0; j < m; ++j) {
-            if (pattern[j] == '*') {
-                dp[j + 1] = dp[j] || prev_dp[j + 1];
-            } else if (pattern[j] == '.' || pattern[j] == command[i]) {
-                dp[j + 1] = prev_dp[j];
-            } else {
-                dp[j + 1] = false;
-            }
-        }
-
-        prev_dp = dp;
-    }
-
-    return prev_dp[m];
 }

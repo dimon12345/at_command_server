@@ -16,5 +16,4 @@ public:
 private:
     std::vector<command_response_pair_t> fixed_commands_;
     std::vector<command_response_pair_t> pattern_commands_;
-    bool isMatch(std::string_view command, std::string_view pattern) const;
 };
