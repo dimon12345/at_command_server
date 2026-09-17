@@ -11,23 +11,23 @@ class ModemEmulator : public Modem {
 public:
     ModemEmulator();
 
-    bool isSimPinLocked() override;
+    bool isSimPinLocked() const override;
     bool unlockSmsPin(std::string_view pin) override;
 
-    bool isRegisteredNetwork() override;
+    bool isRegisteredNetwork() const override;
     void deregisterNetwork() override;
 
     void setAutoOperatorSelection() override;
     CmeError setOperator(int format, std::string_view oper) override;
 
     void setMode(int mode) override;
-    int getMode() override;
+    int getMode() const override;
 
     void setFormat(int format) override;
-    int getFormat() override;
+    int getFormat() const override;
 
-    std::string getSelectionOfCommonOperator() override;
-    std::string getAvailableOperators() override;
+    std::string getSelectionOfCommonOperator() const override;
+    std::string getAvailableOperators() const override;
 
 private:
     bool sim_pin_locked_;

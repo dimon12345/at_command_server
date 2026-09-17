@@ -23,7 +23,7 @@ ModemEmulator::ModemEmulator() {
     sim_pin_locked_ = true;
 }
 
-bool ModemEmulator::isSimPinLocked() {
+bool ModemEmulator::isSimPinLocked() const {
     return sim_pin_locked_;
 }
 
@@ -36,7 +36,7 @@ bool ModemEmulator::unlockSmsPin(std::string_view pin) {
     return false;
 }
 
-bool ModemEmulator::isRegisteredNetwork() {
+bool ModemEmulator::isRegisteredNetwork() const {
     return registered_;
 }
 
@@ -80,7 +80,7 @@ void ModemEmulator::setMode(int mode) {
     mode_ = mode;
 }
 
-int ModemEmulator::getMode() {
+int ModemEmulator::getMode() const {
     return mode_;
 }
 
@@ -88,16 +88,16 @@ void ModemEmulator::setFormat(int format) {
     format_ = format;
 }
 
-int ModemEmulator::getFormat() {
+int ModemEmulator::getFormat() const {
     return format_;
 }
 
-std::string ModemEmulator::getSelectionOfCommonOperator() {
+std::string ModemEmulator::getSelectionOfCommonOperator() const {
     if (!registered_) {
         return std::to_string(mode_);
     }
 
-    Operator &op = operators_[operator_index_];
+    const Operator &op = operators_[operator_index_];
     std::string oper;
     switch(format_) {
         case 0:
@@ -116,7 +116,7 @@ std::string ModemEmulator::getSelectionOfCommonOperator() {
     return result_stream.str();
 }
 
-std::string ModemEmulator::getAvailableOperators() {
+std::string ModemEmulator::getAvailableOperators() const {
     std::stringstream result_stream;
     int index = 0;
     for (const auto &oper: operators_) {
