@@ -9,7 +9,7 @@ mkdir -p build
 (cd build && cmake .. && make)
 
 if [ -z "${DISABLE_TEST:-}" ] || [ "${DISABLE_TEST}" = "0" ]; then
-    build/at_command_server_test
+    build/at_commands_test
 fi
 
 if [ -z "${TEST_ONLY:-}" ] || [ "${TEST_ONLY}" = "0" ]; then

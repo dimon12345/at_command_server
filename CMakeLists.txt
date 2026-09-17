@@ -28,6 +28,7 @@ set(COMMON_SOURCES
 
 add_executable(at_command_server
     src/main.cpp
+    src/ArgsParseConfig.cpp
     src/platform/TtyTerminal.cpp
     src/server/AtCommandServer.cpp
     ${COMMON_SOURCES}

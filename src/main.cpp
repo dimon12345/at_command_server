@@ -1,13 +1,12 @@
 #include <iostream>
 
-#include "Config.h"
+#include "ArgsParseConfig.h"
 #include "server/AtCommandServer.h"
 
 
 int main(int argc, char **argv) {
     try {
-        Config config(argc, argv);
-
+        ArgsParseConfig config(argc, argv);
         AtCommandServer server(config);
         return server.run();
     } catch (const std::system_error& e) {
