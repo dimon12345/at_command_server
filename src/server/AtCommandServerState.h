@@ -1,7 +1,7 @@
 #pragma once
 
 struct AtCommandServerState {
-    // V.250 6.2.4 Recommended default settings for E is 1
+    // TS 127 007: 4.3 Recommended default settings for E is 1
     bool echo_enabled = true;
 
     // verbose CMEE value

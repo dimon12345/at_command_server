@@ -88,7 +88,7 @@ void AtCommandServer::executeCommand(std::string_view command) {
 }
 
 void AtCommandServer::sendResponse(std::string_view response) {
-    // V.250 6.2.6 Recommended default settings for V is 1
+    // TS 127 007: 4.3 Recommended default settings for V is 1
     std::stringstream response_data;
     response_data << "\r\n" << response << "\r\n";
     terminal_.writeData(response_data.str());
