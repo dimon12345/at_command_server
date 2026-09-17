@@ -59,7 +59,7 @@ const std::vector<AtCommandDictionary::command_response_pair_t> &AtCommandDictio
 
 std::string_view AtCommandDictionary::parseCommand(std::string_view command) const
 {
-    for (auto &pattern: pattern_commands_) {
+    for (const auto &pattern: pattern_commands_) {
         if (isMatch(command, pattern.first)) {
             return pattern.second;
         }

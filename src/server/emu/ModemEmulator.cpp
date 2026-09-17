@@ -119,7 +119,7 @@ std::string ModemEmulator::getSelectionOfCommonOperator() {
 std::string ModemEmulator::getAvailableOperators() {
     std::stringstream result_stream;
     int index = 0;
-    for (auto oper: operators_) {
+    for (const auto &oper: operators_) {
         if (result_stream.tellp() != 0) {
             result_stream << ",";
         }
