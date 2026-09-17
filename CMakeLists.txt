@@ -35,7 +35,7 @@ add_executable(at_command_server
 )
 
 
-add_executable(at_command_server_test
+add_executable(at_commands_test
     tests/AtExecutorTest.cpp
     tests/TestAtCommandResponseSender.cpp
     ${COMMON_SOURCES}
@@ -43,7 +43,7 @@ add_executable(at_command_server_test
 
 
 target_link_libraries(
-    at_command_server_test
+    at_commands_test
     GTest::gtest_main
 )
 
@@ -56,10 +56,10 @@ target_include_directories(at_command_server PRIVATE
     ${PROJECT_INCLUDE_DIRECTORIES}
 )
 
-target_include_directories(at_command_server_test PRIVATE
+target_include_directories(at_commands_test PRIVATE
     ${PROJECT_INCLUDE_DIRECTORIES}
 )
 
 
 include(GoogleTest)
-gtest_discover_tests(at_command_server_test)
+gtest_discover_tests(at_commands_test)
